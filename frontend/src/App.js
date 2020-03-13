@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MainPage from "./container/main-page";
+import {Navbar,NavbarBrand,Container} from 'reactstrap'
+import {NavLink as RouterNavLink,Route,Switch} from 'react-router-dom'
+import albums from "./component/albums";
+import Tracks from "./component/tracks";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar color="light" light>
+            <NavbarBrand tag={RouterNavLink} to="/">LAST FM</NavbarBrand>
+
+        </Navbar>
+        <Container>
+            <Switch>
+                <Route path="/" exact component={MainPage}/>
+                <Route path="/albums/:id" component={albums}/>
+                <Route path="/tracks/:id" component={Tracks}/>
+            </Switch>
+        </Container>
     </div>
   );
 }
