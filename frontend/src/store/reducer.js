@@ -1,28 +1,44 @@
-import {FETCH_ALBUMS_SUCCESS, FETCH_AUTHORS_SUCCESS, FETCH_TRACKS_SUCCESS} from "./action";
+import {
+    FETCH_TRACKS_FAILURE,
+    FETCH_TRACKS_REQUEST,
+    FETCH_TRACKS_SUCCESS,
+    POST_TRACKHIS_SUCCESS,
+
+} from "./action";
+
 
 const initialState = {
-    authors:[],
-    albums:[],
-    tracks:[]
+    loading:false,
+    error:null,
+    tracks:[],
+    trackHistory:[]
 
 };
 
 const Reducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_AUTHORS_SUCCESS:
+        case FETCH_TRACKS_REQUEST:
             return {
                 ...state,
-                authors: action.authors
-            };
-        case FETCH_ALBUMS_SUCCESS:
-            return {
-                ...state,
-                albums: action.album
+                loading: true
             };
         case FETCH_TRACKS_SUCCESS:
             return {
                 ...state,
+                loading: false,
+                error: null,
                 tracks: action.track
+            };
+        case FETCH_TRACKS_FAILURE:
+            return {
+                ...state,
+                loading: false,
+                error: action.error
+            };
+        case POST_TRACKHIS_SUCCESS:
+            return {
+                ...state,
+                trackHistory: action.trackhis
             };
         default:
             return state;

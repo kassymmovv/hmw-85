@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
     const track = await Tracks.find({album:req.query.album});
     res.send(track)
   }
-
   return res.send(tracks);
 });
 

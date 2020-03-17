@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30bcee9-0802-4fde-a296-172a69f5928b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/component/albums.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/component/tracks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/container/main-page.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/action.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a30bcee9-0802-4fde-a296-172a69f5928b" name="Default Changelist" comment="finish">
+      <change afterPath="$PROJECT_DIR$/frontend/axiosApi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/userActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hmw-81" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,7 +65,8 @@
       <updated>1583498764656</updated>
       <workItem from="1583498767194" duration="1339000" />
       <workItem from="1583762846488" duration="1017000" />
-      <workItem from="1584046794521" duration="12185000" />
+      <workItem from="1584046794521" duration="12346000" />
+      <workItem from="1584405340196" duration="485000" />
     </task>
     <task id="LOCAL-00001" summary="added all functions">
       <created>1583498853246</created>
@@ -87,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584097750108</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="finish">
+      <created>1584104375488</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584104375488</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,20 +98,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added all functions" />
     <MESSAGE value="added back and react initial structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="added back and react initial structure" />
+    <MESSAGE value="finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="571" y="118" width="768" height="799" key="CommitChangelistDialog2" timestamp="1584097749858">
+    <state x="571" y="118" width="768" height="799" key="CommitChangelistDialog2" timestamp="1584405351423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="118" width="768" height="799" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584097749858" />
-    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584098050895">
+    <state x="571" y="118" width="768" height="799" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584405351423" />
+    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl" timestamp="1584405810821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584098050895" />
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1584097758402">
+    <state x="743" y="277" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584405810821" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1584405359110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584097758402" />
+    <state x="555" y="255" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584405359110" />
   </component>
 </project>

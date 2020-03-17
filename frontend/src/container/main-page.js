@@ -1,36 +1,44 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {getAuthors} from "../store/action";
-import {NavLink} from "react-router-dom";
 
 import Card from "reactstrap/es/Card";
+import {getTracks, postTrackHis} from "../store/action";
 
 class MainPage extends Component {
     componentDidMount() {
-        this.props.getAuthors()
+        this.props.getTracks();
+        if (this.props.user === null){
+            this.props.history.push('/login')
+        }
     }
 
     render() {
 
-
         return (
             <>
-                {this.props.authors.map(k => (
+                {this.props.tracks.map(k => (
                     <Card key={k._id}>
-                        <img src={'http://localhost:8000/uploads/'+k.image} alt="" style={{height:100,width:100}}/>
-                        <span>{k.name}</span>
-                        <NavLink to={`/albums/${k._id}`}>albums</NavLink>
+
+                        <span>название:{k.title}</span>
+                        <span>продолжительность:{k.duration}</span>
+                        <button onClick={() => this.props.postTrackHis({track:k._id})}>Слушать</button>
                     </Card>
                 ))}
+
             </>
         );
     }
 }
 const mapStateToProps = state => ({
-   authors: state.authors
+    tracks:state.tracks.tracks,
+    loading: state.loading,
+    error:state.error,
+    user:state.users.user
+
 });
 const mapDispatchToProps = dispatch => ({
-   getAuthors:() => dispatch(getAuthors())
+   getTracks:() => dispatch(getTracks()),
+   postTrackHis:id => dispatch(postTrackHis(id))
 });
 
 export default connect(mapStateToProps,mapDispatchToProps) (MainPage);

@@ -1,22 +1,26 @@
 import React from 'react';
+import Toolbar from "./component/Toolbar/Toolbar";
+
 import MainPage from "./container/main-page";
-import {Navbar,NavbarBrand,Container} from 'reactstrap'
-import {NavLink as RouterNavLink,Route,Switch} from 'react-router-dom'
-import albums from "./component/albums";
-import Tracks from "./component/tracks";
+import {Container} from 'reactstrap'
+import {Route,Switch} from 'react-router-dom'
+import Register from "./container/Register/Register";
+import Login from "./container/Login/Login";
+import TrackHistory from "./container/TrackHistory/TrackHistory";
+
 
 function App() {
   return (
     <div className="App">
-        <Navbar color="light" light>
-            <NavbarBrand tag={RouterNavLink} to="/">LAST FM</NavbarBrand>
-
-        </Navbar>
+        <header>
+            <Toolbar/>
+        </header>
         <Container>
             <Switch>
                 <Route path="/" exact component={MainPage}/>
-                <Route path="/albums/:id" component={albums}/>
-                <Route path="/tracks/:id" component={Tracks}/>
+                <Route path="/track_history" exact component={TrackHistory}/>
+                <Route path="/register" exact component={Register}/>
+                <Route path="/login" exact component={Login}/>
             </Switch>
         </Container>
     </div>
